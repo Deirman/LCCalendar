@@ -7,16 +7,28 @@
 //
 
 #import "ViewController.h"
+#import "LCCalendarView.h"
 
-@interface ViewController ()
-
+@interface ViewController ()<LCCalendarViewDelegate>
+@property(nonatomic,strong)LCCalendarView *calendarView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _calendarView=[[LCCalendarView alloc]initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height*1/2)];
+    _calendarView.delegate=self;
+    [self.view addSubview:_calendarView];
+
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+#pragma mark - VMCalendarViewDelegate
+-(void)changeCalendarTime{
+    _calendarView.isUpdateing=NO;
+
 }
 
 
