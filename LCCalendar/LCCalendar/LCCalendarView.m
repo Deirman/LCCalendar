@@ -49,7 +49,7 @@
         [calendarViewBackgroudView addSubview:_yearPickerView];
 
 
-        UIImageView*weekTitle =[[UIImageView alloc]initWithFrame:CGRectMake(30, 50, self.frame.size.width-60, 25)];
+        UIImageView*weekTitle =[[UIImageView alloc]initWithFrame:CGRectMake(30, 40, self.frame.size.width-60, 25)];
         [weekTitle setImage:[UIImage imageNamed:@"celendar_week_title"]];
         [calendarViewBackgroudView addSubview:weekTitle];
 
@@ -58,7 +58,7 @@
         float cellOriginY;
 
         cellOriginx=30;
-        cellOriginY=75;
+        cellOriginY=65;
         cellWidth = (self.frame.size.width-60)/7.0;
         cellHeight = (self.frame.size.height-150)/5.0;
 
